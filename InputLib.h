@@ -21,8 +21,8 @@
 
 #define IL_TEST
 
-#define IL_SINGLE_SELECTION
-#define IL_MULTI_SELECTION
+#define IL_Slider_Horizontal
+
 
 
 /**************************/
@@ -34,9 +34,10 @@
 extern "C"{
 #endif
 
+
 void IL_Test();
-void IL_Single_Selection(int x, int y, unsigned char *content);
-void IL_Multi_Selection(int x, int y, unsigned char *content);
+// void IL_Slider_Horizontal(int x, int y, int length, int min, int max, int currentvalue);
+void IL_Slider_Horizontal(int x, int y, int length);
 
 #ifdef __cplusplus
 }

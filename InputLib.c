@@ -20,8 +20,7 @@
 
 #ifdef IL_ALL
     #define IL_TEST
-    #define IL_SINGLE_SELECTION
-    #define IL_MULTI_SELECTION
+    #define IL_Slider_Horizontal
 #endif
 
 /***************/
@@ -35,16 +34,24 @@ void IL_Test()
 }
 #endif
 
-#ifdef IL_SINGLE_SELECTION
-void IL_Single_Selection(int x, int y, unsigned char *content)
-{
-    PrintXY(1,1,(unsigned char*)"Single",0); //just as a filler
-}
-#endif
+// #ifdef IL_Slider_Horizontal
+// void IL_Slider_Horizontal(int x, int y, int length, int min, int max, int currentvalue)
+// {
+//     int sliderrange;
+//     float unit;
+//     // necessary calculatioins
+//     sliderrange = abs(min) + abs(max);
+//     unit = sliderrange/length;
+//     // display
+//     Bdisp_DrawLineVRAM(x, y, x + length, y);
 
-#ifdef IL_MULTI_SELECTION
-void IL_Multi_Selection(int x, int y, unsigned char *content)
+// }
+// #endif
+
+#ifdef IL_Slider_Horizontal
+void IL_Slider_Horizontal(int x, int y, int length)
 {
-    PrintXY(1,1,(unsigned char*)"Multi",0); //just as a filler
+    Bdisp_DrawLineVRAM(x, y, x + length, y);
+    Bdisp_PutDisp_DD();
 }
 #endif
