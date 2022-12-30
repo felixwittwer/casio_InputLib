@@ -10,7 +10,7 @@
 /** @date 12-29-2022                                        **/
 /*************************************************************/
 
-#ifdef INPUTLIB
+#ifndef INPUTLIB
 #define INPUTLIB
 
 /****************************************************/
@@ -18,6 +18,7 @@
 /****************************************************/
 
 #define IL_ALL //defines all functions
+
 #define IL_TEST
 
 #define IL_SINGLE_SELECTION

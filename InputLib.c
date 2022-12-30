@@ -4,7 +4,7 @@
 /**                                                         **/
 /** @author Felix Wittwer                                   **/
 /**                                                         **/
-/** @file InputLib.h                                        **/
+/** @file InputLib.c                                        **/
 /** Include header for MonochromeLib                        **/
 /**                                                         **/
 /** @date 12-29-2022                                        **/
@@ -36,15 +36,15 @@ void IL_Test()
 #endif
 
 #ifdef IL_SINGLE_SELECTION
-void IL_Single_Selection(int x, int y, unsigned char content)
+void IL_Single_Selection(int x, int y, unsigned char *content)
 {
-    PrintXY(x, y, content, 0);
+    PrintXY(1,1,(unsigned char*)"Single",0); //just as a filler
 }
 #endif
 
 #ifdef IL_MULTI_SELECTION
-void IL_Multi_Selection(int x, int y, unsigned char content)
+void IL_Multi_Selection(int x, int y, unsigned char *content)
 {
-    PrintXY(x, y, content, 0);
+    PrintXY(1,1,(unsigned char*)"Multi",0); //just as a filler
 }
 #endif
