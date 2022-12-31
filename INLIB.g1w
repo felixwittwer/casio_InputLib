@@ -1,0 +1,16 @@
+[DLSimProject]
+Name=INLIB
+Version=1.0
+Model=:fx-9860G.dlm
+SourcePath=SRC
+MemoryPath=INIT
+MemCardPath=SDCard
+
+[Program1]
+Program=INLIB.G1A
+Debug=Debug\FXADDINror.dbg
+LoadAddress=80000000:90100000
+
+[Files]
+SourceFile=:INLIB.c
+HeaderFile=:ilibtest.h
