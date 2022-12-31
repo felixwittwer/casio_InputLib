@@ -6,7 +6,7 @@
 /**                                                         **/
 /** @file InputLib.c                                        **/
 /**                                                         **/
-/** @date 12-30-2022                                        **/
+/** @date 12-31-2022                                        **/
 /*************************************************************/
 
 #include <stdio.h>
@@ -20,16 +20,18 @@ void IL_Print_Float(int x, int y, float f)
     PrintXY(x,y,buffer,0);
 }
 
-int IL_Slider_Horizontal(int x, int y, int length, int min, int max, int currentvalue, int displayvalue, int render)
+void IL_Slider_Horizontal(int x, int y, int length, int min, int max, float currentvalue, int displayvalue, int render)
 {
     int sliderrange;
     float unit;
     int sliderx;
-    if(currentvalue > max){
-        currentvalue = max;
-    }else if(currentvalue < min){
-        currentvalue = min;
-    }
+
+    // if(currentvalue > max){
+    //     currentvalue = max;
+    // }else if(currentvalue < min){
+    //     currentvalue = min;
+    // }
+
     // do necessary calculatioins
     sliderrange = abs(min) + abs(max);
     unit = length/sliderrange;
@@ -51,5 +53,19 @@ int IL_Slider_Horizontal(int x, int y, int length, int min, int max, int current
     if(displayvalue == 1){
         // display current value underneath
         IL_Print_Float(x,y+10,currentvalue);
+    }
+}
+
+void IL_Multi_Selection(int x, int y, int verticaldist, int vertcount, int horizoncount)
+{
+    //generate vertical boxes -> later checkboxes
+    int count = 0;
+    unsigned char box[3]={0xE6,0xA5,0};
+    while (count < vertcount)
+    {
+        // Bdisp_SetPoint_VRAM(x,y+(count * verticaldist),1);
+        PrintXY(x,y+(count * verticaldist),box,0);
+        Bdisp_PutDisp_DD();
+        count++;
     }
 }
