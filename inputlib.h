@@ -56,7 +56,7 @@ void IL_Slider_Horizontal(int x, int y, int length, int min, int max, float curr
     }
 }
 
-void IL_Multi_Selection(int x, int y, int verticaldist, int vertcount, int horizoncount)
+void IL_Multi_Selection(int x, int y, int verticaldist, int vertcount)
 {
     //generate vertical boxes -> later checkboxes
     int count = 0;
