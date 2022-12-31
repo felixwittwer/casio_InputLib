@@ -13,6 +13,11 @@
 #include <math.h>
 #include "fxlib.h"
 
+void IL_Test(int x, int y)
+{
+    PrintXY(x,y,(unsigned char*)"Test",0);
+}
+
 void IL_Print_Float(int x, int y, float f)
 {
     unsigned char buffer[9];
