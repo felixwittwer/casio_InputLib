@@ -2,19 +2,19 @@
 
 [_1]
 Type=5
-Order=1
+Order=0
 Top=15
 Left=2235
 Height=4740
 Width=5565
 State=0
 Flags=00000020
-Setting=61:1:inputlib.h
+Setting=57:1:inputlib.h
 OptionA=0
 
 [_2]
 Type=1
-Order=3
+Order=1
 Top=3540
 Left=10905
 Height=4785
@@ -26,7 +26,7 @@ OptionB=15
 
 [_3]
 Type=6
-Order=4
+Order=5
 Top=8460
 Left=11130
 Height=6945
@@ -48,7 +48,7 @@ OptionA=0
 
 [_5]
 Type=8
-Order=5
+Order=6
 Top=75
 Left=7845
 Height=3225
@@ -81,7 +81,7 @@ OptionA=0
 
 [_8]
 Type=17
-Order=6
+Order=4
 Top=15
 Left=-15
 Height=4695
@@ -92,7 +92,7 @@ OptionA=0
 
 [_9]
 Type=15
-Order=0
+Order=2
 Top=4950
 Left=15
 Height=9510
@@ -103,14 +103,14 @@ OptionA=0
 
 [_32]
 Type=16
-Order=2
+Order=3
 Top=75
 Left=16635
 Height=14790
 Width=9060
 State=0
 Flags=00000020
-Setting=47:21:INLIB.c
+Setting=52:23:INLIB.c
 OptionA=0
 
 [_33]
@@ -122,5 +122,5 @@ Height=11685
 Width=8715
 State=16
 Flags=00000020
-Setting=1:58:InputLib.h
+Setting=1:1:ilibtest.h
 OptionA=0

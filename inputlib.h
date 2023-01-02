@@ -13,6 +13,11 @@
 #include <math.h>
 #include "fxlib.h"
 
+void IL_Test(int x, int y)
+{
+    PrintXY(x,y,(unsigned char*)"Test",0);
+}
+
 void IL_Print_Float(int x, int y, float f)
 {
     unsigned char buffer[9];
@@ -56,7 +61,43 @@ void IL_Slider_Horizontal(int x, int y, int length, int min, int max, float curr
     }
 }
 
-void IL_Multi_Selection(int x, int y, int verticaldist, int vertcount, int horizoncount)
+void IL_Slider_Vertical(int x, int y, int length, int min, int max, float currentvalue, int displayvalue, int render)
+{
+    int sliderrange;
+    float unit;
+    int slidery;
+
+    // if(currentvalue > max){
+    //     currentvalue = max;
+    // }else if(currentvalue < min){
+    //     currentvalue = min;
+    // }
+
+    // do necessary calculatioins
+    sliderrange = abs(min) + abs(max);
+    unit = length/sliderrange;
+    // display slider when render=1
+    Bdisp_DrawLineVRAM(x, y, x, y+length);
+    if(min<0){
+        slidery = y+((min*(-1))*unit)+(currentvalue*unit);
+    }else{
+        slidery = y+(currentvalue*unit);
+    }
+
+    // display slider marker when render=1
+    if(render==1){
+        Bdisp_DrawLineVRAM(x-2, slidery, x+2, slidery);
+    }else{
+        Bdisp_ClearLineVRAM(x-2, slidery, x+2, slidery);
+    }
+
+    if(displayvalue == 1){
+        // display current value underneath
+        IL_Print_Float(x-2,y+length+3,currentvalue);
+    }
+}
+
+void IL_Multi_Selection(int x, int y, int verticaldist, int vertcount)
 {
     //generate vertical boxes -> later checkboxes
     int count = 0;
