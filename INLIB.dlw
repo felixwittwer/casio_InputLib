@@ -26,7 +26,7 @@ OptionB=15
 
 [_3]
 Type=6
-Order=5
+Order=3
 Top=8460
 Left=11130
 Height=6945
@@ -81,7 +81,7 @@ OptionA=0
 
 [_8]
 Type=17
-Order=4
+Order=5
 Top=15
 Left=-15
 Height=4695
@@ -103,14 +103,14 @@ OptionA=0
 
 [_32]
 Type=16
-Order=3
+Order=4
 Top=75
 Left=16635
 Height=14790
 Width=9060
 State=0
 Flags=00000020
-Setting=52:23:INLIB.c
+Setting=52:38:INLIB.c
 OptionA=0
 
 [_33]

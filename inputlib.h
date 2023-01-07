@@ -65,6 +65,7 @@ void IL_Slider_Vertical(int x, int y, int length, int min, int max, float curren
 {
     int sliderrange;
     float unit;
+    float test;
     int slidery;
 
     // if(currentvalue > max){
@@ -75,9 +76,15 @@ void IL_Slider_Vertical(int x, int y, int length, int min, int max, float curren
 
     // do necessary calculatioins
     sliderrange = abs(min) + abs(max);
-    unit = length/sliderrange;
+    unit = (sliderrange/length);
+    test = 20 / 40;
+    IL_Print_Float(0,0, unit);
+    IL_Print_Float(0,40, sliderrange);
+    IL_Print_Float(0,48, length);
+    IL_Print_Float(0,56, test);
     // display slider when render=1
     Bdisp_DrawLineVRAM(x, y, x, y+length);
+
     if(min<0){
         slidery = y+((min*(-1))*unit)+(currentvalue*unit);
     }else{

@@ -49,7 +49,7 @@ int AddIn_main(int isAppli, unsigned short OptionNum)
 		
 		Bdisp_AllClr_DDVRAM();
 		IL_Slider_Horizontal(30, 20, 40, 0, 10, currentvalue, 1, 1);
-		IL_Slider_Vertical(90, 10, 40, 0, 10, currentvalue, 1, 1);
+		IL_Slider_Vertical(90, 10, 40, 0, 20, currentvalue, 1, 1);
 		IL_Multi_Selection(10, 5, 6, currentvalue);		
 
 
