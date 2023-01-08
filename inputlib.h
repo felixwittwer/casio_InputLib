@@ -77,7 +77,8 @@ void IL_Slider_Vertical(int x, int y, int length, int min, int max, float curren
     // do necessary calculatioins
     sliderrange = abs(min) + abs(max);
     unit = (sliderrange/length);
-    test = 20 / 40;
+    // Debug for Testing
+    test = 20 / 40; // result: doesn't divide correctly! so float test = 0
     IL_Print_Float(0,0, unit);
     IL_Print_Float(0,40, sliderrange);
     IL_Print_Float(0,48, length);
