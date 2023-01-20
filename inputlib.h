@@ -6,7 +6,7 @@
 /**                                                         **/
 /** @file InputLib.c                                        **/
 /**                                                         **/
-/** @date 12-31-2022                                        **/
+/** @date 01-20-2023                                        **/
 /*************************************************************/
 
 #include <stdio.h>
@@ -23,6 +23,24 @@ void IL_Print_Float(int x, int y, float f)
     unsigned char buffer[9];
     sprintf(buffer, "%f", f);
     PrintXY(x,y,buffer,0);
+}
+
+void IL_Render_F_Button(int x, int y, unsigned char *str){
+    // Maximum of four characters or three + space
+    // Render_F_Button(1,58, "F 1 ");
+    // Render_F_Button(23,58, "F 2 ");
+    // Render_F_Button(45,58, "F 3 ");
+    // Render_F_Button(67,58, "F 4 ");
+    // Render_F_Button(89,58, "F 5 ");
+    Bdisp_DrawLineVRAM(x, y-1, x+17, y-1);
+    Bdisp_DrawLineVRAM(x-1, y-1, x-1, y+5);
+    Bdisp_DrawLineVRAM(x+17, y-1, x+17, y+5);
+    Bdisp_DrawLineVRAM(x+16, y-1, x+16, y+5);
+    PrintMini(x,y, str, MINI_REV);
+
+    Bdisp_ClearLineVRAM(x+17, y+4, x+15, y+6);
+    Bdisp_ClearLineVRAM(x+17, y+5, x+16, y+6);
+    Bdisp_SetPoint_VRAM(x+17, y+6, 0);
 }
 
 void IL_Slider_Horizontal(int x, int y, int length, int min, int max, float currentvalue, int displayvalue, int render)
@@ -79,10 +97,10 @@ void IL_Slider_Vertical(int x, int y, int length, int min, int max, float curren
     unit = (sliderrange/length);
     // Debug for Testing
     test = 20 / 40; // result: doesn't divide correctly! so float test = 0
-    IL_Print_Float(0,0, unit);
-    IL_Print_Float(0,40, sliderrange);
-    IL_Print_Float(0,48, length);
-    IL_Print_Float(0,56, test);
+    // IL_Print_Float(0,0, unit);
+    // IL_Print_Float(0,40, sliderrange);
+    // IL_Print_Float(0,48, length);
+    // IL_Print_Float(0,56, test);
     // display slider when render=1
     Bdisp_DrawLineVRAM(x, y, x, y+length);
 
