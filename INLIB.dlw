@@ -2,7 +2,7 @@
 
 [_1]
 Type=5
-Order=0
+Order=1
 Top=15
 Left=2235
 Height=4740
@@ -14,7 +14,7 @@ OptionA=0
 
 [_2]
 Type=1
-Order=1
+Order=3
 Top=3540
 Left=10905
 Height=4785
@@ -26,7 +26,7 @@ OptionB=15
 
 [_3]
 Type=6
-Order=3
+Order=2
 Top=8460
 Left=11130
 Height=6945
@@ -92,7 +92,7 @@ OptionA=0
 
 [_9]
 Type=15
-Order=2
+Order=0
 Top=4950
 Left=15
 Height=9510
@@ -110,7 +110,7 @@ Height=14790
 Width=9060
 State=0
 Flags=00000020
-Setting=52:38:INLIB.c
+Setting=54:28:INLIB.c
 OptionA=0
 
 [_33]
